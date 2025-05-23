@@ -6,17 +6,19 @@
 /*   By: moabe < moabe@student.42tokyo.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 20:01:38 by moabe             #+#    #+#             */
-/*   Updated: 2025/05/23 13:56:08 by moabe            ###   ########.fr       */
+/*   Updated: 2025/05/23 14:56:48 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *format_string, argument_list)
+int	ft_printf(const char *format_string, ...)
 {
 	const char	*p;
 	int			count;
-
+	va_list		
+	
+	va_start()
 	count = 0;
 	p = ft_strdup(format_string);
 	if (!p)

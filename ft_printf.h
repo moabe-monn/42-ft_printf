@@ -6,7 +6,7 @@
 /*   By: moabe < moabe@student.42tokyo.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 20:02:44 by moabe             #+#    #+#             */
-/*   Updated: 2025/05/23 14:24:24 by moabe            ###   ########.fr       */
+/*   Updated: 2025/05/23 14:42:05 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
+# include <stdint.h>
 # include "libft.h"
 
 int		ft_case_c(int c);
