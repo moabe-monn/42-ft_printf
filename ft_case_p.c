@@ -6,24 +6,26 @@
 /*   By: moabe < moabe@student.42tokyo.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 09:36:33 by moabe             #+#    #+#             */
-/*   Updated: 2025/05/23 14:16:57 by moabe            ###   ########.fr       */
+/*   Updated: 2025/08/06 20:06:53 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_case_p(void *p)
+int	ft_case_p(unsigned long p)
 {
 	uintptr_t	num;
 	char		*address;
 	int			count;
 	
+	if (!p)
+		return (write(1, "(nil)", 5));
 	num = (uintptr_t)p;
 	address = ft_itoauin(num);
 	count = ft_strlen(address);
 	write(1, "0x", 2);
 	write(1, address, count);
-	return (count+3);
+	return (count+2);
 }
 
 char	*ft_itoauin(uintptr_t n)

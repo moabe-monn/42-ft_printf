@@ -6,7 +6,7 @@
 /*   By: moabe < moabe@student.42tokyo.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 20:02:44 by moabe             #+#    #+#             */
-/*   Updated: 2025/08/06 16:13:40 by moabe            ###   ########.fr       */
+/*   Updated: 2025/08/06 20:06:29 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 int		ft_case_c(int c);
 int		ft_case_di(int p);
-int		ft_case_p(void *p);
+int		ft_case_p(unsigned long p);
 char	*ft_itoauin(uintptr_t n);
 int		ft_case_s(char *p);
 int		ft_case_u(unsigned int p);

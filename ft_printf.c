@@ -6,7 +6,7 @@
 /*   By: moabe < moabe@student.42tokyo.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 20:01:38 by moabe             #+#    #+#             */
-/*   Updated: 2025/08/06 17:32:07 by moabe            ###   ########.fr       */
+/*   Updated: 2025/08/06 20:04:20 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	judge_type(char p, va_list argument_list)
 	else if (p == 's')
 		return (ft_case_s(va_arg(argument_list, char*)));
 	else if (p == 'p')
-		return (ft_case_p(va_arg(argument_list, void*)));
+		return (ft_case_p(va_arg(argument_list, unsigned long)));
 	else if (p == 'd' || p == 'i')
 		return (ft_case_di(va_arg(argument_list, int)));
 	else if (p == 'u')
