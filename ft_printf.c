@@ -6,7 +6,7 @@
 /*   By: moabe < moabe@student.42tokyo.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 20:01:38 by moabe             #+#    #+#             */
-/*   Updated: 2025/08/06 17:14:23 by moabe            ###   ########.fr       */
+/*   Updated: 2025/08/06 17:32:07 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,13 @@ int	ft_printf(const char *format_string, ...)
 	count = 0;
 	while (*format_string)
 	{
-		while (*format_string != '%' && format_string != NULL)
-		{
-			write(1, format_string++, 1);
-			count++;
-		}
 		if (*format_string == '%')
 		{
 			count += judge_type(*++format_string, argument_list);
 			format_string++;	
 		}
+		else
+			count += write(1, format_string++, 1);
 	}
 	va_end(argument_list);
 	return (count);
@@ -58,10 +55,10 @@ int	judge_type(char p, va_list argument_list)
 		return(write(1, &p, 1));
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main(void)
-{
-	ft_printf("%c", '0');
-	return (0);
-}
+// int main(void)
+// {
+// 	ft_printf("%c", '0');
+// 	return (0);
+// }
