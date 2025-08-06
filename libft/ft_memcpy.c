@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_case_di.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moabe < moabe@student.42tokyo.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/23 09:20:14 by moabe             #+#    #+#             */
-/*   Updated: 2025/08/06 17:03:49 by moabe            ###   ########.fr       */
+/*   Created: 2025/04/27 16:53:07 by moabe             #+#    #+#             */
+/*   Updated: 2025/05/23 12:53:45 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_case_di(int p)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char	*decimal;
-	
-	decimal = ft_itoa(p);
-	return (write(1, decimal, ft_strlen(decimal)));
+	unsigned char		*d_cpy;
+	const unsigned char	*s_cpy;
+
+	d_cpy = (unsigned char *)dest;
+	s_cpy = (const unsigned char *)src;
+	while (n--)
+	{
+		*d_cpy++ = *s_cpy++;
+	}
+	return (dest);
 }

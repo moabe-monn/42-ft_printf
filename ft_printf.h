@@ -6,7 +6,7 @@
 /*   By: moabe < moabe@student.42tokyo.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 20:02:44 by moabe             #+#    #+#             */
-/*   Updated: 2025/05/23 14:42:05 by moabe            ###   ########.fr       */
+/*   Updated: 2025/08/06 16:13:40 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,7 @@ int		ft_case_x(unsigned int p);
 int		ft_case_X(unsigned int p);
 char	*ft_itoax(unsigned int n);
 char	*ft_itoaX(unsigned int n);
-char	*ft_itoa(int n);
-int		ft_printf(const char *format_string, argument_list);
-void	judge_type(char p, argument_list);
-char	*ft_strdup(const char *src);
-size_t	ft_strlen(const char *s);
+int		ft_printf(const char *format_string, ...);
+int		judge_type(char p, va_list argument_list);
 
 #endif

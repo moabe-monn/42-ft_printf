@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_case_di.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moabe < moabe@student.42tokyo.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/23 09:20:14 by moabe             #+#    #+#             */
-/*   Updated: 2025/08/06 17:03:49 by moabe            ###   ########.fr       */
+/*   Created: 2025/05/08 15:10:05 by moabe             #+#    #+#             */
+/*   Updated: 2025/05/23 12:54:40 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_case_di(int p)
+void	ft_putstr_fd(char *s, int fd)
 {
-	char	*decimal;
-	
-	decimal = ft_itoa(p);
-	return (write(1, decimal, ft_strlen(decimal)));
+	unsigned int	i;
+
+	i = 0;
+	if (s != NULL)
+	{
+		while (s[i])
+		{
+			ft_putchar_fd(s[i], fd);
+			i++;
+		}
+	}
 }

@@ -1,21 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_case_di.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moabe < moabe@student.42tokyo.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/23 09:20:14 by moabe             #+#    #+#             */
-/*   Updated: 2025/08/06 17:03:49 by moabe            ###   ########.fr       */
+/*   Created: 2025/02/10 08:45:12 by moabe             #+#    #+#             */
+/*   Updated: 2025/05/23 12:55:48 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_case_di(int p)
+size_t	ft_strlcpy(char *dest, const char *src, unsigned int size)
 {
-	char	*decimal;
-	
-	decimal = ft_itoa(p);
-	return (write(1, decimal, ft_strlen(decimal)));
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = 0;
+	while (src[i] != '\0')
+	{
+		i++;
+	}
+	if (size == 0)
+	{
+		return (i);
+	}
+	while (j < size - 1 && src[j] != '\0')
+	{
+		dest[j] = src[j];
+		j++;
+	}
+	dest[j] = '\0';
+	return (i);
 }
