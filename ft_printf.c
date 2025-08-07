@@ -6,11 +6,33 @@
 /*   By: moabe <moabe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 20:01:38 by moabe             #+#    #+#             */
-/*   Updated: 2025/08/07 16:02:39 by moabe            ###   ########.fr       */
+/*   Updated: 2025/08/07 17:44:49 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+static int	judge_type(char p, va_list argument_list)
+{
+	if (p == 'c')
+		return (ft_case_c(va_arg(argument_list, int)));
+	else if (p == 's')
+		return (ft_case_s(va_arg(argument_list, char *)));
+	else if (p == 'p')
+		return (ft_case_p(va_arg(argument_list, unsigned long)));
+	else if (p == 'd' || p == 'i')
+		return (ft_case_di(va_arg(argument_list, int)));
+	else if (p == 'u')
+		return (ft_case_u(va_arg(argument_list, unsigned int)));
+	else if (p == 'x')
+		return (ft_case_x(va_arg(argument_list, unsigned int)));
+	else if (p == 'X')
+		return (ft_case_upperx(va_arg(argument_list, unsigned int)));
+	else if (p == '%')
+		return (ft_case_c('%'));
+	else
+		return (write(1, &p, 1));
+}
 
 int	ft_printf(const char *format_string, ...)
 {
@@ -31,26 +53,4 @@ int	ft_printf(const char *format_string, ...)
 	}
 	va_end(argument_list);
 	return (count);
-}
-
-int	judge_type(char p, va_list argument_list)
-{
-	if (p == 'c')
-		return (ft_case_c(va_arg(argument_list, int)));
-	else if (p == 's')
-		return (ft_case_s(va_arg(argument_list, char *)));
-	else if (p == 'p')
-		return (ft_case_p(va_arg(argument_list, unsigned long)));
-	else if (p == 'd' || p == 'i')
-		return (ft_case_di(va_arg(argument_list, int)));
-	else if (p == 'u')
-		return (ft_case_u(va_arg(argument_list, unsigned int)));
-	else if (p == 'x')
-		return (ft_case_x(va_arg(argument_list, unsigned int)));
-	else if (p == 'X')
-		return (ft_case_upperx(va_arg(argument_list, unsigned int)));
-	else if (p == '%')
-		return (ft_case_c('%'));
-	else
-		return (write(1, &p, 1));
 }

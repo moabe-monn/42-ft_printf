@@ -6,11 +6,28 @@
 /*   By: moabe <moabe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 09:36:33 by moabe             #+#    #+#             */
-/*   Updated: 2025/08/07 16:27:40 by moabe            ###   ########.fr       */
+/*   Updated: 2025/08/07 17:43:21 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+static char	*ft_itoauin(uintptr_t n)
+{
+	char			buf[100];
+	char			*tmp;
+
+	tmp = &buf[sizeof(buf)];
+	*--tmp = '\0';
+	while (1)
+	{
+		*--tmp = "0123456789abcdef"[n % 16];
+		n /= 16;
+		if (!n)
+			break ;
+	}
+	return (ft_strdup(tmp));
+}
 
 int	ft_case_p(unsigned long p)
 {
@@ -29,21 +46,4 @@ int	ft_case_p(unsigned long p)
 	write(1, address, count);
 	free(address);
 	return ((int)count + 2);
-}
-
-char	*ft_itoauin(uintptr_t n)
-{
-	char			buf[100];
-	char			*tmp;
-
-	tmp = &buf[sizeof(buf)];
-	*--tmp = '\0';
-	while (1)
-	{
-		*--tmp = "0123456789abcdef"[n % 16];
-		n /= 16;
-		if (!n)
-			break ;
-	}
-	return (ft_strdup(tmp));
 }

@@ -6,11 +6,45 @@
 /*   By: moabe <moabe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 11:49:48 by moabe             #+#    #+#             */
-/*   Updated: 2025/08/07 16:23:06 by moabe            ###   ########.fr       */
+/*   Updated: 2025/08/07 17:44:15 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+static char	*ft_itoax(unsigned int n)
+{
+	char			buf[33];
+	char			*tmp;
+
+	tmp = &buf[sizeof(buf)];
+	*--tmp = '\0';
+	while (1)
+	{
+		*--tmp = "0123456789abcdef"[n % 16];
+		n /= 16;
+		if (!n)
+			break ;
+	}
+	return (ft_strdup(tmp));
+}
+
+static char	*ft_itoa_upperx(unsigned int n)
+{
+	char			buf[33];
+	char			*tmp;
+
+	tmp = &buf[sizeof(buf)];
+	*--tmp = '\0';
+	while (1)
+	{
+		*--tmp = "0123456789ABCDEF"[n % 16];
+		n /= 16;
+		if (!n)
+			break ;
+	}
+	return (ft_strdup(tmp));
+}
 
 int	ft_case_x(unsigned int p)
 {
@@ -38,38 +72,4 @@ int	ft_case_upperx(unsigned int p)
 	write(1, hex, count);
 	free(hex);
 	return ((int)count);
-}
-
-char	*ft_itoax(unsigned int n)
-{
-	char			buf[33];
-	char			*tmp;
-
-	tmp = &buf[sizeof(buf)];
-	*--tmp = '\0';
-	while (1)
-	{
-		*--tmp = "0123456789abcdef"[n % 16];
-		n /= 16;
-		if (!n)
-			break ;
-	}
-	return (ft_strdup(tmp));
-}
-
-char	*ft_itoa_upperx(unsigned int n)
-{
-	char			buf[33];
-	char			*tmp;
-
-	tmp = &buf[sizeof(buf)];
-	*--tmp = '\0';
-	while (1)
-	{
-		*--tmp = "0123456789ABCDEF"[n % 16];
-		n /= 16;
-		if (!n)
-			break ;
-	}
-	return (ft_strdup(tmp));
 }
