@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_case_s.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: moabe < moabe@student.42tokyo.jp>          +#+  +:+       +#+        */
+/*   By: moabe <moabe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 09:03:06 by moabe             #+#    #+#             */
-/*   Updated: 2025/05/23 13:05:20 by moabe            ###   ########.fr       */
+/*   Updated: 2025/08/07 15:02:46 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,7 @@ int	ft_case_s(char *p)
 	int		count;
 
 	if (p == NULL)
-	{
-		write(1, "(null)", 6);
-		return (6);
-	}
+		return (write(1, "(null)", 6));
 	count = ft_strlen(p);
-	write(1, p, count);
-	return (count);
+	return (write(1, p, count));
 }
