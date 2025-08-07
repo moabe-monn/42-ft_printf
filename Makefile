@@ -8,9 +8,9 @@ SRCS = ft_case_c.c \
 	  ft_case_p.c \
 	  ft_case_s.c \
 	  ft_case_u.c \
-	  ft_case_xX.c \
-	  ft_printf.c 	  
-	  
+	  ft_case_lxux.c \
+	  ft_printf.c
+
 OBJS = ${SRCS:.c=.o}
 
 all: $(NAME)
