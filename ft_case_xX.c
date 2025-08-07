@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_case_xX.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: moabe < moabe@student.42tokyo.jp>          +#+  +:+       +#+        */
+/*   By: moabe <moabe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 11:49:48 by moabe             #+#    #+#             */
-/*   Updated: 2025/05/23 14:03:45 by moabe            ###   ########.fr       */
+/*   Updated: 2025/08/07 14:32:01 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_case_x(unsigned int p) //負の時は補数を返す
+int	ft_case_x(unsigned int p)
 {
 	char	*hex;
 	int		count;
@@ -23,17 +23,16 @@ int	ft_case_x(unsigned int p) //負の時は補数を返す
 	return (count);
 }
 
-int	ft_case_X(unsigned int p) //負の時は補数を返す
+int	ft_case_upperx(unsigned int p)
 {
-	char	*heX;
+	char	*hex;
 	int		count;
 
-	heX = ft_itoaX(p);
-	count = ft_strlen(heX);
-	write(1, heX, count);
+	hex = ft_itoa_upperx(p);
+	count = ft_strlen(hex);
+	write(1, hex, count);
 	return (count);
 }
-
 
 char	*ft_itoax(unsigned int n)
 {
@@ -52,7 +51,7 @@ char	*ft_itoax(unsigned int n)
 	return (ft_strdup(tmp));
 }
 
-char	*ft_itoaX(unsigned int n)
+char	*ft_itoa_upperx(unsigned int n)
 {
 	char			buf[33];
 	char			*tmp;

@@ -20,3 +20,15 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
+
+// int main(void)
+// {
+// 	int c;
+//     int d;
+
+// 	c = toupper('a');
+// 	printf("aを大文字に変換→%c\n",c);
+//     d = ft_toupper('n');
+//     printf("自作関数：nを大文字に変換→%c\n",d);
+// 	return (0);
+// }

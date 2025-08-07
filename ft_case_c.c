@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_case_c.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: moabe < moabe@student.42tokyo.jp>          +#+  +:+       +#+        */
+/*   By: moabe <moabe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 19:53:15 by moabe             #+#    #+#             */
-/*   Updated: 2025/05/23 08:52:37 by moabe            ###   ########.fr       */
+/*   Updated: 2025/08/07 14:27:01 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_case_c(int c)
+int	ft_case_c(int c)
 {
 	write(1, &c, 1);
 	return (1);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: moabe < moabe@student.42tokyo.jp>          +#+  +:+       +#+        */
+/*   By: moabe <moabe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 08:26:44 by moabe             #+#    #+#             */
-/*   Updated: 2025/05/23 12:55:58 by moabe            ###   ########.fr       */
+/*   Updated: 2025/05/01 13:53:55 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,14 @@ size_t	ft_strlen(const char *s)
 	}
 	return (i);
 }
+
+// int	main(void)
+// {
+// 	char	*str;
+// 	int	ans;
+
+// 	str = "Hello, World!";
+// 	ans = ft_strlen(str);
+// 	printf("%d",ans);
+// 	return (0);
+// }

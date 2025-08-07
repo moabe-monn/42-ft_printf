@@ -20,3 +20,15 @@ int	ft_tolower(int c)
 	}
 	return (c);
 }
+
+// int main(void)
+// {
+// 	int c;
+//     int d;
+
+// 	c = tolower('A');
+// 	printf("Aを大文字に変換→%c\n",c);
+//     d = ft_tolower('n');
+//     printf("自作関数：Lを大文字に変換→%c\n",d);
+// 	return (0);
+// }

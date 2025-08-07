@@ -55,6 +55,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 //         printf("Test 1: NULL returned\n");
 //     }
 
+//     // テスト2：NULLポインタを渡したらどうなるか？
+//     result = ft_strmapi(NULL, example_func1);
+//     if (result == NULL)
+//         printf("Test 2: Passed (NULL returned)\n");
 
 //     // テスト3："hello" → 全部が 'x' になるか？
 //     result = ft_strmapi("hello", example_func2);

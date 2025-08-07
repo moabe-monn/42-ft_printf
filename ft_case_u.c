@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_case_u.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: moabe < moabe@student.42tokyo.jp>          +#+  +:+       +#+        */
+/*   By: moabe <moabe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 12:27:45 by moabe             #+#    #+#             */
-/*   Updated: 2025/08/06 18:59:57 by moabe            ###   ########.fr       */
+/*   Updated: 2025/08/07 14:28:12 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_case_u(unsigned int p)
 	ui = ft_uitoa(p);
 	count = ft_strlen(ui);
 	write(1, ui, count);
-	return(count);
+	return (count);
 }
 
 char	*ft_uitoa(unsigned int n)

@@ -29,3 +29,24 @@ void	*ft_memchr(const void *buf, int ch, size_t n)
 	}
 	return (NULL);
 }
+
+// int main(void)
+// {
+// 	char buf[] = "ABCD5EFGH";
+// 	char *ch;
+//     char *ch2;
+
+// 	ch = (char*)memchr(buf,'D',sizeof(buf));
+// 	if(ch!=NULL){
+// 		printf("検索文字から表示→%s\n",ch);
+// 	}else{
+// 		puts("検索文字が見つかりませんでした。");
+// 	}
+//     ch2 = (char*)ft_memchr(buf,'D',sizeof(buf));
+// 	if(ch2!=NULL){
+// 		printf("検索文字から表示→%s\n",ch);
+// 	}else{
+// 		puts("検索文字が見つかりませんでした。");
+// 	}
+// 	return (0);
+// }

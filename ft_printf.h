@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: moabe < moabe@student.42tokyo.jp>          +#+  +:+       +#+        */
+/*   By: moabe <moabe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 20:02:44 by moabe             #+#    #+#             */
-/*   Updated: 2025/08/06 20:06:29 by moabe            ###   ########.fr       */
+/*   Updated: 2025/08/07 14:31:49 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ int		ft_case_s(char *p);
 int		ft_case_u(unsigned int p);
 char	*ft_uitoa(unsigned int n);
 int		ft_case_x(unsigned int p);
-int		ft_case_X(unsigned int p);
+int		ft_case_upperx(unsigned int p);
 char	*ft_itoax(unsigned int n);
-char	*ft_itoaX(unsigned int n);
+char	*ft_itoa_upperx(unsigned int n);
 int		ft_printf(const char *format_string, ...);
 int		judge_type(char p, va_list argument_list);
 

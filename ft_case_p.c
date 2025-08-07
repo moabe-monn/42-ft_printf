@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_case_p.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: moabe < moabe@student.42tokyo.jp>          +#+  +:+       +#+        */
+/*   By: moabe <moabe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 09:36:33 by moabe             #+#    #+#             */
-/*   Updated: 2025/08/06 20:06:53 by moabe            ###   ########.fr       */
+/*   Updated: 2025/08/07 14:27:55 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_case_p(unsigned long p)
 	uintptr_t	num;
 	char		*address;
 	int			count;
-	
+
 	if (!p)
 		return (write(1, "(nil)", 5));
 	num = (uintptr_t)p;
@@ -25,7 +25,7 @@ int	ft_case_p(unsigned long p)
 	count = ft_strlen(address);
 	write(1, "0x", 2);
 	write(1, address, count);
-	return (count+2);
+	return (count + 2);
 }
 
 char	*ft_itoauin(uintptr_t n)

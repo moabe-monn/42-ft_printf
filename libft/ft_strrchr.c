@@ -35,3 +35,25 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
+
+// #include <stdio.h>
+// #include <string.h>
+
+// int main(void)
+// {
+// 	char test[] = "computer program";
+// 	char *p;
+//     char *q;
+//     char *r;
+//     char *s;
+
+// 	p = strchr(test,'p');
+// 	printf("検索文字が見つかった場所から表示→%s\n",p);
+//     q = strrchr(test,'p');
+//     printf("検索文字が見つかった場所から表示→%s\n",q);
+//     r = strchr(test,'p');
+// 	printf("検索文字が見つかった場所から表示→%s\n",r);
+//     s = ft_strrchr(test,'p');
+//     printf("検索文字が見つかった場所から表示→%s\n",s);
+// 	return (0);
+// }
