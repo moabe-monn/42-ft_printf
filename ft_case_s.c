@@ -6,7 +6,7 @@
 /*   By: moabe <moabe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 09:03:06 by moabe             #+#    #+#             */
-/*   Updated: 2025/08/07 15:02:46 by moabe            ###   ########.fr       */
+/*   Updated: 2025/08/07 16:39:55 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 
 int	ft_case_s(char *p)
 {
-	int		count;
+	size_t		count;
 
 	if (p == NULL)
-		return (write(1, "(null)", 6));
+		return ((int)write(1, "(null)", 6));
 	count = ft_strlen(p);
-	return (write(1, p, count));
+	write(1, p, count);
+	return ((int)count);
 }

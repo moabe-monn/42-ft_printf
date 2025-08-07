@@ -6,7 +6,7 @@
 /*   By: moabe <moabe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 09:36:33 by moabe             #+#    #+#             */
-/*   Updated: 2025/08/07 14:27:55 by moabe            ###   ########.fr       */
+/*   Updated: 2025/08/07 16:27:40 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,19 @@ int	ft_case_p(unsigned long p)
 {
 	uintptr_t	num;
 	char		*address;
-	int			count;
+	size_t		count;
 
 	if (!p)
-		return (write(1, "(nil)", 5));
+		return ((int)write(1, "(nil)", 5));
 	num = (uintptr_t)p;
 	address = ft_itoauin(num);
+	if (address == NULL)
+		return ((int)write(1, "(null)", 6));
 	count = ft_strlen(address);
 	write(1, "0x", 2);
 	write(1, address, count);
-	return (count + 2);
+	free(address);
+	return ((int)count + 2);
 }
 
 char	*ft_itoauin(uintptr_t n)

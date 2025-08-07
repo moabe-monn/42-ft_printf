@@ -6,7 +6,7 @@
 /*   By: moabe <moabe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 11:49:48 by moabe             #+#    #+#             */
-/*   Updated: 2025/08/07 15:10:39 by moabe            ###   ########.fr       */
+/*   Updated: 2025/08/07 16:23:06 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,30 @@
 
 int	ft_case_x(unsigned int p)
 {
-	char	*hex;
-	int		count;
+	char		*hex;
+	size_t		count;
 
 	hex = ft_itoax(p);
+	if (hex == NULL)
+		return ((int)write(1, "(null)", 6));
 	count = ft_strlen(hex);
 	write(1, hex, count);
-	return (count);
+	free(hex);
+	return ((int)count);
 }
 
 int	ft_case_upperx(unsigned int p)
 {
-	char	*hex;
-	int		count;
+	char		*hex;
+	size_t		count;
 
 	hex = ft_itoa_upperx(p);
+	if (hex == NULL)
+		return ((int)write(1, "(null)", 6));
 	count = ft_strlen(hex);
 	write(1, hex, count);
-	return (count);
+	free(hex);
+	return ((int)count);
 }
 
 char	*ft_itoax(unsigned int n)

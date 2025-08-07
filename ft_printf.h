@@ -6,7 +6,7 @@
 /*   By: moabe <moabe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 20:02:44 by moabe             #+#    #+#             */
-/*   Updated: 2025/08/07 14:31:49 by moabe            ###   ########.fr       */
+/*   Updated: 2025/08/07 15:54:47 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdarg.h>
 # include <stdint.h>
+# include <stddef.h>
 # include "libft.h"
 
 int		ft_case_c(int c);

@@ -6,7 +6,7 @@
 /*   By: moabe <moabe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 20:01:38 by moabe             #+#    #+#             */
-/*   Updated: 2025/08/07 14:35:57 by moabe            ###   ########.fr       */
+/*   Updated: 2025/08/07 16:02:39 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,3 @@ int	judge_type(char p, va_list argument_list)
 	else
 		return (write(1, &p, 1));
 }
-
-// #include <stdio.h>
-
-// int main(void)
-// {
-// 	ft_printf("%c", '0');
-// 	return (0);
-// }

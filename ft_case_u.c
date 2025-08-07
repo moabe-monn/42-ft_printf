@@ -6,7 +6,7 @@
 /*   By: moabe <moabe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 12:27:45 by moabe             #+#    #+#             */
-/*   Updated: 2025/08/07 14:28:12 by moabe            ###   ########.fr       */
+/*   Updated: 2025/08/07 16:41:20 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,16 @@
 
 int	ft_case_u(unsigned int p)
 {
-	char	*ui;
-	int		count;
+	char		*ui;
+	size_t		count;
 
 	ui = ft_uitoa(p);
+	if (ui == NULL)
+		return ((int)write(1, "(null)", 6));
 	count = ft_strlen(ui);
 	write(1, ui, count);
-	return (count);
+	free(ui);
+	return ((int)count);
 }
 
 char	*ft_uitoa(unsigned int n)
