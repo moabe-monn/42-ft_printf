@@ -6,7 +6,7 @@
 /*   By: moabe <moabe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 20:01:38 by moabe             #+#    #+#             */
-/*   Updated: 2025/08/07 17:44:49 by moabe            ###   ########.fr       */
+/*   Updated: 2025/08/07 18:26:54 by moabe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	ft_printf(const char *format_string, ...)
 			format_string++;
 		}
 		else
-			count += write(1, format_string++, 1);
+			count += (int)write(1, format_string++, 1);
 	}
 	va_end(argument_list);
 	return (count);

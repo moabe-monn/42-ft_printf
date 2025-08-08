@@ -22,7 +22,7 @@ $(NAME): $(OBJS)
 	ar rcs $@ $^
 
 %.o: %.c
-	$(CC) $(FLAG) -c $< -o $@
+	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(OBJS)
